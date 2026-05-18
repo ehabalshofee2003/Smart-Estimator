@@ -1,6 +1,5 @@
 <p align="center">
 
-<img src="https://img.shields.io/badge/STATUS-PRODUCTION_READY-52c41a?style=for-the-badge" />
 
 <br/>
 
