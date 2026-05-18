@@ -3,7 +3,8 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "build": "vite build",
+        "build": "npm run build:frontend && vite build",
+        "build:frontend": "cd ../frontend && npm install && npm run build",
         "dev": "vite"
     },
     "devDependencies": {

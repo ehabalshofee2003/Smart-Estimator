@@ -6,6 +6,10 @@ export default defineConfig({
   resolve: {
     dedupe: ['react', 'react-dom', 'react-i18next', 'i18next'],
   },
+  build: {
+    outDir: '../backend/public/build',
+    emptyOutDir: true,
+  },
   server: {
     proxy: {
       '/api': {
