@@ -1,6 +1,20 @@
+<p align="center">
+
+<img src="https://img.shields.io/badge/STATUS-PRODUCTION_READY-52c41a?style=for-the-badge" />
+
+<br/>
+
+<img src="https://img.shields.io/badge/Laravel-12-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" />
+
+<img src="https://img.shields.io/badge/React-18+-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+
+<img src="https://img.shields.io/badge/Docker-READY-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+
 # 🤖 SmartEstimator
 
-منصة تقدير المشاريع البرمجية بالذكاء الاصطناعي
+### منصة تقدير المشاريع البرمجية بالذكاء الاصطناعي
+
+</p>
 
 تطبيق ويب متكامل (Full-Stack SaaS) يحاكي واجهات ChatGPT، يقوم بمحادثة المستخدم باللغة العربية، ويجمع متطلبات المشروع، ثم يحسب التقديرات الدقيقة للحجم، التعقيد، الجهد، المدة، والتكلفة باستخدام معايير FPA و UCP.
 
