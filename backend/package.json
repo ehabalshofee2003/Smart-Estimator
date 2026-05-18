@@ -4,7 +4,7 @@
     "type": "module",
     "scripts": {
         "build": "npm run build:frontend && vite build",
-        "build:frontend": "cd ../frontend && npm install && npm run build",
+        "build:frontend": "npm --prefix ../frontend install && npm --prefix ../frontend run build",
         "dev": "vite"
     },
     "devDependencies": {
