@@ -1,0 +1,54 @@
+ 
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: estimation_nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./backend:/var/www
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php
+
+  php:
+    build:
+      context: ./docker/php
+    container_name: estimation_php
+    volumes:
+      - ./backend:/var/www
+
+  mysql:
+    image: mysql:8.0
+    container_name: estimation_mysql
+    environment:
+      MYSQL_DATABASE: smartestimator
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: secret
+      MYSQL_USER: estimation
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    
+  phpmyadmin:
+      image: phpmyadmin/phpmyadmin
+      container_name: estimation_phpmyadmin
+      environment:
+        PMA_HOST: mysql
+        PMA_PORT: 3306
+        PMA_USER: estimation
+        PMA_PASSWORD: secret
+      ports:
+        - "8081:80"
+      depends_on:
+        - mysql
+
+  redis:
+    image: redis:alpine
+    container_name: estimation_redis
+    ports:
+      - "6379:6379"
+
+volumes:
+  mysql_data:
